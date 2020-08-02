@@ -1,17 +1,12 @@
-import _ from 'lodash';
-import printMe from './print.js';
+require("easy-autocomplete");
+import Print from "./print";
 
-function component() {
-    const element = document.createElement('div');
-    const btn = document.createElement('button');
+$(document).ready(() => {
+  Print();
 
-    element.innerHTML = _.join(['Hello', 'webpack'], ' ');
-    btn.innerHTML = 'Click me and check the console!';
-    btn.onclick = printMe;
+  let options = {
+    data: ["blue", "green", "pink", "red", "yellow"],
+  };
 
-    element.appendChild(btn);
-
-    return element;
-}
-
-document.body.appendChild(component());
+  $("#basics").easyAutocomplete(options);
+});
