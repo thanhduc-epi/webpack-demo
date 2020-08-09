@@ -1,8 +1,9 @@
 require("easy-autocomplete");
-import Print from "./print";
+import Bingmaps from "./bingmaps";
 
 $(document).ready(() => {
-  Print();
+  let bingmaps = new Bingmaps();
+  bingmaps.init();
 
   let options = {
     data: ["blue", "green", "pink", "red", "yellow"],
