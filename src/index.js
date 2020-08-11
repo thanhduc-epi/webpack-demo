@@ -1,3 +1,6 @@
+import $ from "jquery";
+require("bootstrap-slider");
+import("../node_modules/bootstrap-slider/dist/css/bootstrap-slider.css");
 require("easy-autocomplete");
 import Bingmaps from "./bingmaps";
 
@@ -10,4 +13,6 @@ $(document).ready(() => {
   };
 
   $("#basics").easyAutocomplete(options);
+
+  var mySlider = $("#input-slider").slider();
 });
